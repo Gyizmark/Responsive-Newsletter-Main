@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    body {
+        @apply font-body bg-neutral-blue-700 text-sm;
+    }
+}
+
+@layer components {
+    .custom-btn {
+        @apply bg-neutral-blue-700 text-neutral-white px-4 py-2 rounded-lg drop-shadow-xl w-full text-center mt-4;
+    }
+    .custom-btn:hover {
+        @apply bg-gradient-to-r from-pink-500 to-orange-500;
+    }
+    .custom-page {
+        @apply m-auto;
+    }
+    .error {
+        @apply bg-red-100 border-primary-red; /* Custom error styles */
+    }
+    .error::placeholder{
+        @apply text-primary-red;
+    }
+}
+    
+    
+    
+    

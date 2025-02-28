@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="relative min-h-screen">
+    <div id="success-model" class="bg-neutral-white max-w-full small:m-auto small:flex small:justify-center small:px-16 small:flex-col small:h-screen small:w-full hidden w-[400px] px-10 py-8 rounded-xl z-50 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <img src="./assets/images/icon-success.svg" width="50px" alt="Success message">
+      <h1 class="font-extrabold text-md text-neutral-blue-800 text-4xl mt-4 mb-4">Thanks for Subscribing!</h1>
+      <p class="mb-4">A confirmation email has been sent to <span class="font-bold">ash@loremcompany.com.</span> 
+        Please open it and click the button inside to confirm your subscription.</p>
+        <button id="close-btn" class="custom-btn">Dismiss message</button>
+    </div>
+    <section id="main-model" class="min-h-screen custom-page grid items-center">
+      <div class="flex m-auto max-w-[95%] flex-row-reverse w-1/2 small:flex-col p-4 large:justify-between medium:flex-col rounded-xl bg-neutral-white">
+          <div class="flex items-center small:p-0 medium:p-0 p-2">
+            <picture>
+              <source media="(max-width: 640px)" width="100%" srcset="./assets/images/illustration-sign-up-mobile.svg">
+              <source media="(max-width: 960px)" width="100%" srcset="./assets/images/illustration-sign-up-mobile.svg">
+              <source media="(min-width: 1024px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
+              <img src="./assets/images/illustration-sign-up-mobile.svg" width="320px" alt="Sign up" srcset="./assets/images/illustration-sign-up-desktop.svg">
+            </picture>
+          </div> 
+          <div>
+            <h1 class="font-bold text-5xl text-neutral-blue-800 mt-4 mb-2 px-3">Stay updated!</h1>
+            <p class="mb-5 px-3">Join 60,000+ product managers receiving monthly updates on:</p>
+            <ul class="list-image-[url(./assets/images/icon-list.svg)] px-4 mb-5 list-inside">
+              <li class="py-1">Product discovery and building recieving monthly</li>
+              <li class="py-1"> Measuring to ensure updates are a success</li>
+              <li class="py-1">And much more!</li>
+            </ul>
+            <form id="myForm" class="py-2 px-4 relative">
+              <div class="flex justify-between">
+              <label for="userEmail" class="font-bold">Email Address</label><br>
+              <span id="error-msg" class="font-bold hidden text-primary-red">Valid email required</span>
+            </div>
+              <input type="text" class="border-solid border-2 w-full py-2 rounded-md px-2 " name="mail"  id="userEmail" placeholder="email@company.com" >
+              <button type="submit" class="custom-btn text-grey">Subscribe to monthly newsletter</button>
+            </form>
+          </div>
+    </div>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
